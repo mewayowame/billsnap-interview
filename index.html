@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREELANCE VOICES - フリーランスの声を届ける</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>FREELANCE VOICES</h1>
+            <p class="tagline">自由に働く、クリエイターたちの物語</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="navMenu">
+                <li><a onclick="showHome(); closeMenu()">ホーム</a></li>
+                <li><a onclick="filterCategory('all'); closeMenu()">すべて</a></li>
+                <li><a onclick="filterCategory('designer'); closeMenu()">デザイナー</a></li>
+                <li><a onclick="filterCategory('programmer'); closeMenu()">プログラマー</a></li>
+                <li><a onclick="filterCategory('illustrator'); closeMenu()">イラストレーター</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="home-page">
+        <section class="hero">
+            <div class="container">
+                <h2>日本で活躍するフリーランスの声</h2>
+                <p>デザイナー、プログラマー、イラストレーターたちの実体験から学ぶ、フリーランスという働き方</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="filter-section">
+                <div class="filter-title">🏷️ タグで絞り込み</div>
+                <div class="tags-container" id="tagFilter"></div>
+            </div>
+
+            <div class="interview-grid" id="interviewGrid"></div>
+        </div>
+    </div>
+
+    <div id="article-page" class="article-page">
+        <div class="container">
+            <a class="back-button" onclick="showHome()">← 一覧に戻る</a>
+            <div id="articleContent"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 FREELANCE VOICES. All rights reserved.</p>
+            <p>フリーランスで働くクリエイターたちの声をお届けします</p>
+        </div>
+    </footer>
+
+    <script src="articles-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
